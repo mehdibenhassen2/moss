@@ -1,0 +1,53 @@
+<div>
+  <form [formGroup]="CollegeDetailsForm" (submit)="SaveData()">
+    <table>
+      <tr>
+        <td>
+          <b>College Name</b>
+        </td>
+        <td>
+          <input type="text" formControlName="name" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <b>Student</b>
+        </td>
+        <td>
+          <input type="text" formControlName="student" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <b>Date</b>
+        </td>
+        <td>
+          <input type="text" formControlName="date" />
+        </td>
+      </tr>
+    </table>
+    <br />
+    <table>
+
+      <tr>
+        <td>
+          <input type="submit" value="Add data" />
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+
+<table>
+  <tr>
+    <th>College Name</th>
+    <th>student</th>
+    <th>Date</th>
+  </tr>
+  <tr *ngFor="let CollegeUniq of CollegeSet">
+    <td>{{CollegeUniq.name}}</td>
+    <td>{{CollegeUniq.student}}</td>
+    <td>{{CollegeUniq.date}}</td>
+  </tr>
+</table>
